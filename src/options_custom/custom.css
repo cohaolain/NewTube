@@ -1,0 +1,13 @@
+td {
+    white-space: nowrap;
+}
+
+.group-name {
+    font-weight: bold;
+}
+
+.logo {
+    width: 175px;
+    margin: auto;
+    display: block;
+}
