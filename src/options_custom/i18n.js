@@ -3,6 +3,9 @@ this.i18n = {
         "en": "Hide watched videos",
         "de": "Angesehene Videos ausblenden"
     },
+    "partSwitch": {
+        "en": "Hide partial videos"
+    },
     "settings": {
         "en": "Settings",
         "de": "Einstellungen"
