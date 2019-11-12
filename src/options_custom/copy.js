@@ -1,1 +1,2 @@
-document.getElementById("copy").innerHTML = "&copy; " + new Date().getFullYear() + " by Ciarán Ó hAoláin";
+document.getElementById("copy").innerHTML =
+    "&copy; " + new Date().getFullYear() + " by Ciarán Ó hAoláin";
