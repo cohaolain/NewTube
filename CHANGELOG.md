@@ -7,11 +7,12 @@ The format is based on
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## [v1.0.1] - 2019-11-12
 
 ### Added
 
 -   The ability to choose whether _partially_ watched videos should be hidden.
+    -   Credit to [@TechElucidation](https://github.com/TechElucidation)
 
 ## [v1.0.0] - 2019-05-13
 
