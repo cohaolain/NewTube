@@ -7,7 +7,7 @@ The format is based on
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.0.1] - 2019-11-12
+## [v1.0.1-beta] - 2019-11-12
 
 ### Added
 
