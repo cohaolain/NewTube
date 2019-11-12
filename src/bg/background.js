@@ -3,7 +3,7 @@
 /*
 chrome.extension.onMessage.addListener(
   function(request, sender, sendResponse) {
-  	chrome.pageAction.show(sender.tab.id);
+    chrome.pageAction.show(sender.tab.id);
     sendResponse();
 });
 */
@@ -23,36 +23,35 @@ chrome.extension.onMessage.addListener(
 chrome.runtime.sendMessage({"message": "activate_icon"});
 */
 
-
 // Called when the url of a tab changes.
 function checkForValidUrl(tabId, changeInfo, tab) {
     try {
-        if (tab.url.indexOf('https://www.youtube.com') == 0) {
+        if (tab.url.indexOf("https://www.youtube.com") == 0) {
             chrome.pageAction.show(tabId);
         }
-    } catch (e) {
-        
-    }
-};
+    } catch (e) {}
+}
 
 // Listen for any changes to the URL of any tab.
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.method == "getLocalStorage") {
-		if(request.key) { // Single key requested
-			sendResponse({data: localStorage[request.key]});
-		} else if(request.keys) { // An array of keys requested
-			var data = {};
-			request.keys.forEach(function(key) {data[key] = localStorage[key];})
-			sendResponse({data: data});
-		}
-    }
-    else
-      sendResponse({}); // snub them.
+        if (request.key) {
+            // Single key requested
+            sendResponse({ data: localStorage[request.key] });
+        } else if (request.keys) {
+            // An array of keys requested
+            var data = {};
+            request.keys.forEach(function(key) {
+                data[key] = localStorage[key];
+            });
+            sendResponse({ data: data });
+        }
+    } else sendResponse({}); // snub them.
 });
 
 chrome.runtime.onInstalled.addListener(function() {
-    localStorage['store.settings.mainSwitch'] = "true";
-    localStorage['store.settings.partSwitch'] = "true";
+    localStorage["store.settings.mainSwitch"] = "true";
+    localStorage["store.settings.partSwitch"] = "true";
 });

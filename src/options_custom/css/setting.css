@@ -12,7 +12,7 @@
 }
 
 .setting.group {
-    border-top: 1px solid #EEEEEE;
+    border-top: 1px solid #eeeeee;
     margin-top: 10px;
     padding-top: 5px;
     padding-left: 2px;
@@ -39,13 +39,15 @@
     margin-top: 3px;
 }
 
-.setting.label, .setting.element-label {
+.setting.label,
+.setting.element-label {
     margin-right: 15px;
     font-size: 13px;
     font-weight: normal;
 }
 
-.setting.label.checkbox, .setting.element-label {
+.setting.label.checkbox,
+.setting.element-label {
     margin-left: 5px;
     margin-right: 0;
 }

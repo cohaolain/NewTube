@@ -1,9 +1,9 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
+  "update_url": "https://clients2.google.com/service/update2/crx",
 
   "name": "NewTube (Hide Watched YouTube Videos)",
   "short_name": "NewTube",
-  "version": "1.0.5", 
+  "version": "1.0.5",
   "manifest_version": 2,
   "description": "Taking your YouTube, making it NewTube.",
   "homepage_url": "https://cohaolain.ie",
@@ -19,20 +19,14 @@
     "persistent": false
   },
   "options_page": "src/options_custom/index.html",
-  "permissions": [
-    "https://www.youtube.com/*"
-  ],
+  "permissions": ["https://www.youtube.com/*"],
   "page_action": {
-    "default_popup":"src/options_custom/popup.html"
+    "default_popup": "src/options_custom/popup.html"
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://www.youtube.com/*"
-      ],
-      "js": [
-        "src/inject/inject.js"
-      ]
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["src/inject/inject.js"]
     }
   ],
   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self' blob: filesystem: chrome-extension-resource:"

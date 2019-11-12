@@ -4,31 +4,31 @@
 // License: LGPL v2.1
 */
 .fancy {
-    text-shadow: #F5F5F5 0 1px 0;
+    text-shadow: #f5f5f5 0 1px 0;
 }
 
 #sidebar {
     position: absolute;
-    background-color: #EDEDED;
-    background-image: linear-gradient(top, #EDEDED, #F5F5F5);
+    background-color: #ededed;
+    background-image: linear-gradient(top, #ededed, #f5f5f5);
     background-image: -webkit-gradient(
         linear,
         left top,
         left 500,
-        color-stop(0, #EDEDED),
-        color-stop(1, #F5F5F5)
+        color-stop(0, #ededed),
+        color-stop(1, #f5f5f5)
     );
     background-image: -moz-linear-gradient(
         center top,
-        #EDEDED 0%,
-        #F5F5F5 100%
+        #ededed 0%,
+        #f5f5f5 100%
     );
-    background-image: -o-linear-gradient(top, #EDEDED, #F5F5F5);
+    background-image: -o-linear-gradient(top, #ededed, #f5f5f5);
     width: 219px;
     top: 0;
     left: 0;
     bottom: 0;
-    border-right: 1px solid #C2C2C2;
+    border-right: 1px solid #c2c2c2;
     box-shadow: inset -8px 0 30px -30px black;
 }
 
@@ -81,11 +81,12 @@
     width: 130px;
 }
 
-#tab-container .tab.active, body.searching #search-container {
-    background-color: #D4D4D4;
-    border-color: #BFBFBF;
+#tab-container .tab.active,
+body.searching #search-container {
+    background-color: #d4d4d4;
+    border-color: #bfbfbf;
     color: black;
-    text-shadow: #DBDBDB 0 1px 0;
+    text-shadow: #dbdbdb 0 1px 0;
     box-shadow: inset -12px 0 30px -30px black;
 }
 
@@ -125,7 +126,8 @@ body.searching #search-result-container {
     display: block !important;
 }
 
-body.measuring .tab-content, body.measuring #search-result-container {
+body.measuring .tab-content,
+body.measuring #search-result-container {
     display: block !important;
     opacity: 0;
     overflow: hidden;
