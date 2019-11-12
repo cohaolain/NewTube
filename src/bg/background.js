@@ -40,12 +40,19 @@ chrome.tabs.onUpdated.addListener(checkForValidUrl);
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.method == "getLocalStorage") {
-        sendResponse({data: localStorage[request.key]});
+		if(request.key) { // Single key requested
+			sendResponse({data: localStorage[request.key]});
+		} else if(request.keys) { // An array of keys requested
+			var data = {};
+			request.keys.forEach(function(key) {data[key] = localStorage[key];})
+			sendResponse({data: data});
+		}
     }
     else
       sendResponse({}); // snub them.
 });
 
 chrome.runtime.onInstalled.addListener(function() {
-    localStorage['store.settings.mainSwitch'] = "false";
+    localStorage['store.settings.mainSwitch'] = "true";
+    localStorage['store.settings.partSwitch'] = "true";
 });
